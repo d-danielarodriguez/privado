@@ -1,6 +1,11 @@
-<div class="content">
-  <app-header></app-header>
-  <router-outlet (activate)="onActivate($event)"></router-outlet>
-</div>
+<nav>
+  <ul>
+    <li><a [routerLink]="['/Home']" routerLinkActive="router-link-active" >Home</a></li>
+    <li><a [routerLink]="['/Busqueda']" routerLinkActive="router-link-active" >Busqueda</a></li>
+    <li><a [routerLink]="['/Viven']" routerLinkActive="router-link-active" >Viven</a></li>
+    <li><a [routerLink]="['/Alimenta']" routerLinkActive="router-link-active" >Alimenta</a></li>
+  </ul>
+</nav>
 
-<app-footer></app-footer>
+<hr>
+<router-outlet></router-outlet>

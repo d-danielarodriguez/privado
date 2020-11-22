@@ -1,0 +1,45 @@
+<div class="container">
+    <div id="formulario">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <input class="form-control" ngModel name="text" id="inputTxt" placeholder="Nombre de persona o calle">
+            <div class="form-check" ngbRadioGroup name="grupo" ngModel name="tipo" ngDefaultControl>
+                <div>
+                    <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1">
+                    <label class="form-check-label" for="r1" ngbButtonLabel>Persona</label>
+                </div>
+                <div>
+                    <input class="form-check-input" ngbButton type="radio" [value]="2" name="radios" id=r2>
+                    <label class="form-check-label" for="r2" ngbButtonLabel>Direccion</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Buscar</button>
+        </form>
+    </div>
+<hr><br><br>
+    <div *ngIf="personaActive" id="res-persona">
+        <table>
+            <thead>
+               <tr>
+                   <th>CURP</th>
+                   <th>Nombre</th>
+                   <th>Ver mas</th>
+                   <th>Modificar</th>
+                   <th>Eliminar</th>
+               </tr> 
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of info">
+                    <th>{{i.curp}}</th>
+                    <td>{{i.nombre+' '+i.ap_pat+' '+i.ap_mat}} </td>
+                    <td><button class="btn btn-dark" (click)="clickVer(i.sueldo)">ver</button></td>
+                    <td><button class="btn btn-dark" (click)="clickModificar(2)">modificar</button></td>
+                    <td><button class="btn btn-dark" (click)="clickEliminar(i.curp)">eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="direccionActive" id="res-direccion">
+        <span>Hola direccion</span>
+    </div>
+</div>

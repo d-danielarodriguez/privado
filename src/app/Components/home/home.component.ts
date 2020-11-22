@@ -1,8 +1,8 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 
-//interface
-//const
+// interface
+// const
 
 @Component({
     selector: 'app-home',
@@ -11,16 +11,16 @@ import { Component, OnInit } from '@angular/core';
   })
   export class HomeComponent implements OnInit {
 
-    //info = INFORMACION;
-  
+    // info = INFORMACION;
+
     constructor(private router: Router) { }
-  
+
     ngOnInit(): void {
     }
-  
+
     navegar(link: string){
       const liga = '/' + link;
       this.router.navigate([liga]);
     }
-  
+
   }
