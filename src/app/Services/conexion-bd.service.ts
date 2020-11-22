@@ -11,8 +11,13 @@ export class ConexionBdService {
 
   constructor(private http: HttpClient) { }
 
-  getPersona(){
-    const link = `${this.url}/get_persona`;
+  buscarPersona(nombre: string){
+    const link = `${this.url}/buscar_persona/${nombre}`;
+    return this.http.get(link).pipe(map((data: any) => data.array));
+  }
+
+  buscarDomicilio(nombre: string){
+    const link = `${this.url}/buscar_domicilio/${nombre}`;
     return this.http.get(link).pipe(map((data: any) => data.array));
   }
 }

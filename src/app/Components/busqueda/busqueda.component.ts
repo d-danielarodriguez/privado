@@ -25,23 +25,39 @@ export class BusquedaComponent implements OnInit {
     if(this.query.tipo === '1'){
       this.personaActive = true;
       this.direccionActive = false;
-      this.bdService.getPersona().subscribe((data: any) =>{
+      this.bdService.buscarPersona(this.query.text).subscribe((data: any) => {
         this.info = data;
         console.log(this.info);
       })
     } else {
       this.personaActive = false;
       this.direccionActive = true;
+      this.bdService.buscarDomicilio(this.query.text).subscribe((data: any) => {
+        this.info = data;
+        console.log(this.info);
+      })
     }
   }
 
-  clickVer(id: number){
+
+
+  clickVer(curp: string){
+    console.log('Click en ver mas', curp);
+  }
+  clickModificar(curp: string){
+    console.log('Click en modificar', curp);
+  }
+  clickEliminar(curp: string){
+    console.log('Click en eliminar', curp);
+  }
+
+  verDomicilio(id: number){
     console.log('Click en ver mas', id);
   }
-  clickModificar(id: number){
+  modificarDomicilio(id: number){
     console.log('Click en modificar', id);
   }
-  clickEliminar(id: string){
+  eliminarDomicilio(id: number){
     console.log('Click en eliminar', id);
   }
 
