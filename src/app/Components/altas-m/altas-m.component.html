@@ -1,0 +1,23 @@
+<p>altas-m works!</p>
+<p>home works!</p>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col text-center">
+            <h3>Propiedad privada bajo el resguardo de Electricity Info MX:</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div *ngFor="let i of info" class="col-md-6">
+            <div class="card mx-auto my-2" style="max-width: 18rem;">
+                <img class="card-img-top" [src]="i.imagen" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{i.titulo}}</h5>
+                    <p class="card-text">{{i.descripcion}}</p>
+                </div>
+                <div class="card-footer text-center">
+                    <a (click)="navegar(i.link)" class="btn btn-outline-success">Ingresar</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
