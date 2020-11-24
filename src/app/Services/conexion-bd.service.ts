@@ -25,6 +25,16 @@ export class ConexionBdService {
     return this.http.get(link).pipe(map((data: any) => data.array));
   }
 
+  updatePersona(body: any){
+    const link = `${this.url}/update_persona`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
+  deletePersona(curp: any){
+    const link = `${this.url}/delete_persona/${curp}`;
+    return this.http.delete(link).pipe(map((data: any) => data.array));
+  }
+
   buscarDomicilio(nombre: string){
     const link = `${this.url}/buscar_domicilio/${nombre}`;
     return this.http.get(link).pipe(map((data: any) => data.array));

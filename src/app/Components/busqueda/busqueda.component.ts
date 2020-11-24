@@ -52,7 +52,9 @@ export class BusquedaComponent implements OnInit {
     this.router.navigate(['/CambioPersona']);
   }
   eliminarPersona(curp: string){
-    console.log('Click en eliminar', curp);
+    this.bdService.deletePersona(curp).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
   verDomicilio(id: number){
