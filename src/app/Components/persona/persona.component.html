@@ -1,1 +1,69 @@
-<p>persona works!</p>
+<div>
+    <h1 class="h3 mb-0 text-secondary">Alta Persona</h1>
+</div>
+<hr>
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div class="form-group row">
+        <div class="col-sm-1">
+            
+        </div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Nombre(s)</div>
+          <input type="text" class="form-control form-control-user" id="pFirstName" >
+        </div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Apellido Paterno</div>
+          <input type="text" class="form-control form-control-user" id="pPaterno" >
+        </div>
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Apellidos Materno</div>
+            <input type="text" class="form-control form-control-user" id="pMaterno" >
+          </div>
+      </div>
+
+    <div class="form-group row">
+        <div class="col-sm-1">
+            
+        </div>
+        <div class="col-sm-4">
+            <div class="h6 text-secondary">Fecha Nacimiento</div>
+            <input class="form-control" type="date" value="2020-07-19" id="pfechaNac">
+        </div>
+        <div class="col-sm-3" >
+            <div class="h6 text-secondary">CURP</div>
+            <input type="text" class="form-control form-control-user text-uppercase" id="pCurp" >
+        </div>
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Sexo</div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pMasculino" value="option1"> M
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pFmenino" value="option2"> F
+                </label>
+            </div>
+        </div>   
+    </div>
+        
+    <div class="row">
+        <div class="col-sm-1">
+            
+        </div>
+        <div class="col-3">
+            <div class="h6 text-secondary">Sueldo Promedio</div>
+            <input type="number" class="form-control form-control-user" id="pSueldo" >
+
+        </div>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-1">
+            
+        </div><div class="col-sm-1">
+            <button type="submit" class="btn-success">Guardar</button> 
+        </div>
+    </div>
+  </form>
