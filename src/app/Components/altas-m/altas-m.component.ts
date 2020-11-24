@@ -12,35 +12,46 @@ const INFORMACION: Carta [] = [
   {
     titulo: 'Recibo Form',
     descripcion: '',
-    link:'',
+    link: '',
     imagen: 'assets/recibo.jpg'
   },
   {
     titulo: 'Persona Form',
     descripcion: '',
-    link:'persona',
+    link: 'persona',
     imagen: 'assets/person.jpg'
   },
   {
     titulo: 'Colonia Form',
     descripcion: '',
-    link:'',
+    link: '',
     imagen: 'assets/colo.jpg'
   },
   {
     titulo: 'Domicilio Form',
     descripcion: '',
-    link:'',
+    link: '',
     imagen: 'assets/domicilio.jpg'
   },
   {
     titulo: 'Dispositivo Form',
     descripcion: '',
-    link:'',
+    link: '',
     imagen: 'assets/dispo_energ.jpg'
+  },
+  {
+    titulo: 'Relacion Viven',
+    descripcion: 'Crea las relaciones entre personas y domicilio donde viven',
+    link: 'Viven',
+    imagen: 'assets/foco.png'
+  },
+  {
+    titulo: 'Relacion Alimenta',
+    descripcion: 'Crea las relaciones entre plantas de energia y las colonias que aliementa',
+    link: 'Alimenta',
+    imagen: 'assets/foco.png'
   }
-
-]
+];
 
 @Component({
   selector: 'app-altas-m',

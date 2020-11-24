@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -11,51 +12,58 @@ export class BusquedaComponent implements OnInit {
   query: { text: any; tipo: any; };
   personaActive = false;
   direccionActive = false;
+  errorActive = false;
   info = [];
 
   idPrueba = 5;
 
-  constructor(private bdService: ConexionBdService) { }
+  constructor(private bdService: ConexionBdService, private router: Router) { }
 
   ngOnInit(): void {}
 
   onSubmit(form: NgForm){
     const {text, tipo} = form.value;
     this.query = {text, tipo};
-    if(this.query.tipo === '1'){
+    if (this.query.tipo === '1'){
       this.personaActive = true;
       this.direccionActive = false;
+      this.errorActive = false;
       this.bdService.buscarPersona(this.query.text).subscribe((data: any) => {
         this.info = data;
-        console.log(this.info);
-      })
-    } else {
+      });
+    } else if (this.query.tipo === '2') {
       this.personaActive = false;
       this.direccionActive = true;
+      this.errorActive = false;
       this.bdService.buscarDomicilio(this.query.text).subscribe((data: any) => {
         this.info = data;
-        console.log(this.info);
-      })
+      });
+    } else {
+      this.errorActive = true;
     }
   }
 
-
-
-  clickVer(curp: string){
-    console.log('Click en ver mas', curp);
+  verPersona(curp: string){
+    this.bdService.cambiarLlave(curp);
+    this.router.navigate(['/VistaPersona']);
   }
-  clickModificar(curp: string){
-    console.log('Click en modificar', curp);
+  modificarPersona(curp: string){
+    this.bdService.cambiarLlave(curp);
+    this.router.navigate(['/CambioPersona']);
   }
-  clickEliminar(curp: string){
+  eliminarPersona(curp: string){
     console.log('Click en eliminar', curp);
   }
 
   verDomicilio(id: number){
     console.log('Click en ver mas', id);
+    this.bdService.cambiarLlave(id.toString());
+    this.router.navigate(['/VistaDireccion']);
   }
   modificarDomicilio(id: number){
     console.log('Click en modificar', id);
+    this.bdService.cambiarLlave(id.toString());
+    this.router.navigate(['/CambioDireccion']);
   }
   eliminarDomicilio(id: number){
     console.log('Click en eliminar', id);

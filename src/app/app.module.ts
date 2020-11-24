@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { AltasMComponent } from './Components/altas-m/altas-m.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { PersonaComponent } from './Components/persona/persona.component';
+import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
+import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
+import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
+import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { PersonaComponent } from './Components/persona/persona.component';
     AlimentaComponent,
     AltasMComponent,
     HeaderComponent,
-    PersonaComponent
+    PersonaComponent,
+    VistaPersonaComponent,
+    VistaDireccionComponent,
+    CambioPersonaComponent,
+    CambioDireccionComponent
   ],
   imports: [
     BrowserModule,

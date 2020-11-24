@@ -4,7 +4,7 @@
             <input class="form-control" ngModel name="text" id="inputTxt" placeholder="Nombre de persona o calle">
             <div class="form-check" ngbRadioGroup name="grupo" ngModel name="tipo" ngDefaultControl>
                 <div>
-                    <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1" checked>
+                    <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1">
                     <label class="form-check-label" for="r1" ngbButtonLabel>Persona</label>
                 </div>
                 <div>
@@ -33,9 +33,9 @@
                 <tr *ngFor="let i of info">
                     <th>{{i.curp}}</th>
                     <td>{{i.nombre+' '+i.ap_pat+' '+i.ap_mat}} </td>
-                    <td><button class="btn btn-dark" (click)="clickVer(i.curp)">ver</button></td>
-                    <td><button class="btn btn-dark" (click)="clickModificar(i.curp)">modificar</button></td>
-                    <td><button class="btn btn-dark" (click)="clickEliminar(i.curp)">eliminar</button></td>
+                    <td><button class="btn btn-dark" (click)="verPersona(i.curp)">ver</button></td>
+                    <td><button class="btn btn-dark" (click)="modificarPersona(i.curp)">modificar</button></td>
+                    <td><button class="btn btn-dark" (click)="eliminarPersona(i.curp)">eliminar</button></td>
                 </tr>
             </tbody>
         </table>
@@ -62,5 +62,9 @@
                 </tr>
             </tbody>
         </table>
+    </div>
+
+    <div *ngIf="errorActive">
+        <p>Elegir un tipo de busqueda</p>
     </div>
 </div>

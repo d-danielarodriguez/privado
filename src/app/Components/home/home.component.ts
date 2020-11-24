@@ -19,7 +19,7 @@ const INFORMACION: Carta [] = [
   {
     titulo: 'Sub-menú busqueda',
     descripcion: 'Consulta, elimina o modifica información',
-    link: '',
+    link: 'Busqueda',
     imagen: 'assets/upview.jpg'
   }
 
