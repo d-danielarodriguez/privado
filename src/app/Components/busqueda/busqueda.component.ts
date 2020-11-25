@@ -58,17 +58,17 @@ export class BusquedaComponent implements OnInit {
   }
 
   verDomicilio(id: number){
-    console.log('Click en ver mas', id);
     this.bdService.cambiarLlave(id.toString());
     this.router.navigate(['/VistaDireccion']);
   }
   modificarDomicilio(id: number){
-    console.log('Click en modificar', id);
     this.bdService.cambiarLlave(id.toString());
     this.router.navigate(['/CambioDireccion']);
   }
   eliminarDomicilio(id: number){
-    console.log('Click en eliminar', id);
+    this.bdService.deleteDomicilio(id.toString()).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
 }

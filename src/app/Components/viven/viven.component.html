@@ -1,18 +1,18 @@
 <div class="container">
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <table>
-            <thead>
+        <table class="table table-striped">
+            <thead class="thead-dark">
                 <tr><td colspan="2">Relacionar Persona con Direccion</td></tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
                         <p>CURP de Persona</p>
-                        <input class="form-control" ngModel name="curp" placeholder="CURP">
+                        <input class="form-control" ngModel name="qcurp" placeholder="CURP">
                     </td>
                     <td>
-                        <p>ID de Direccion</p>
-                        <input type="number" class="form-control" ngModel name="idDirec" placeholder="Id">
+                        <p>ID de Domicilio</p>
+                        <input type="number" class="form-control" ngModel name="qidDirec" placeholder="Id">
                     </td>
                 </tr>
             </tbody>
