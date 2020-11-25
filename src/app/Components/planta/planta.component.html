@@ -1,0 +1,67 @@
+<p>planta works!</p>
+<div>
+    <h1 class="h3 mb-0 text-secondary">Alta Planta</h1>
+</div>
+<hr>
+<form > <!--[formGroup]="form" (ngSubmit)="submit()"-->
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Cantidad de energía generada</div>
+          <input type="number" class="form-control form-control-user" id="plEnergia" >
+        </div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Recurso del que se alimenta</div>
+          <input type="text" class="form-control form-control-user" id="plRecurso" >
+        </div>
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Emisiones Generadas</div>
+            <input type="number" class="form-control form-control-user" id="plEmisiones" >
+          </div>
+      </div>
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Tipo de Planta</div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plIndustrial" value="option1"> Industrial
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plRenovable" value="option2"> Renovable
+                </label>
+            </div>
+        </div>   
+
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Tipo de Energía</div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plSolar" value="option1"> Solar
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plEolica" value="option2"> Eólica
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plHidraulica" value="option3"> Hidráulica
+                </label>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+            <button type="submit" class="btn-success">Guardar</button> 
+        </div>
+    </div>
+  </form>

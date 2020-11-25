@@ -1,0 +1,31 @@
+<div>
+    <h1 class="h3 mb-0 text-secondary">Alta Recibo</h1>
+</div>
+<hr>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"><!--(ngSubmit)="onSubmit(form)" #form="ngForm"--> 
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Fecha </div>
+            <input class="form-control" type="date" value="2020-07-19" ngModel name="fecha">
+        </div>
+        <div class="col-3">
+            <div class="h6 text-secondary">Cantidad de Energía Consumida</div>
+            <input type="number" class="form-control " ngModel name="cantEnerg">
+
+        </div>
+        <div class="col-3">
+            <div class="h6 text-secondary">Cantidad a pagar</div>
+            <input type="number" class="form-control " ngModel name="cantPagar" >
+        </div>  
+
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+            <button type="submit" class="btn-success">Guardar</button> 
+        </div>
+    </div>
+  </form>
