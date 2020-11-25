@@ -1,22 +1,21 @@
-<p>planta works!</p>
 <div>
     <h1 class="h3 mb-0 text-secondary">Alta Planta</h1>
 </div>
 <hr>
-<form > <!--[formGroup]="form" (ngSubmit)="submit()"-->
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"> 
     <div class="form-group row">
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Cantidad de energía generada</div>
-          <input type="number" class="form-control form-control-user" id="plEnergia" >
+          <input type="number" class="form-control " ngModel name="cantEnergGen">
         </div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Recurso del que se alimenta</div>
-          <input type="text" class="form-control form-control-user" id="plRecurso" >
+          <input type="text" class="form-control " ngModel name="recursoUtiliza">
         </div>
         <div class="col-sm-3">
             <div class="h6 text-secondary">Emisiones Generadas</div>
-            <input type="number" class="form-control form-control-user" id="plEmisiones" >
+            <input type="number" class="form-control" ngModel name="emisionesGen">
           </div>
       </div>
 
@@ -25,15 +24,17 @@
         
         <div class="col-sm-3">
             <div class="h6 text-secondary">Tipo de Planta</div>
-            <div class="form-check form-check-inline">
+            <div class="form" >
+              <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plIndustrial" value="option1"> Industrial
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="industrial"> Industrial
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plRenovable" value="option2"> Renovable
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="renovable"> Renovable
                 </label>
+            </div>
             </div>
         </div>   
 
@@ -41,17 +42,17 @@
             <div class="h6 text-secondary">Tipo de Energía</div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plSolar" value="option1"> Solar
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="solar"> Solar
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plEolica" value="option2"> Eólica
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="eolica"> Eólica
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="plHidraulica" value="option3"> Hidráulica
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="hidraulica"> Hidráulica
                 </label>
             </div>
         </div>

@@ -2,20 +2,20 @@
     <h1 class="h3 mb-0 text-secondary">Alta Persona</h1>
 </div>
 <hr>
-<form > 
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"> 
     <div class="form-group row">
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Nombre(s)</div>
-          <input type="text" class="form-control form-control-user" id="pFirstName" >
+          <input type="text" class="form-control form-control-user" ngModel name="Nombres" >
         </div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Apellido Paterno</div>
-          <input type="text" class="form-control form-control-user" id="pPaterno" >
+          <input type="text" class="form-control form-control-user" ngModel name="pPaterno" >
         </div>
         <div class="col-sm-3">
             <div class="h6 text-secondary">Apellidos Materno</div>
-            <input type="text" class="form-control form-control-user" id="pMaterno" >
+            <input type="text" class="form-control form-control-user" ngModel name="pMaterno" >
           </div>
       </div>
 
@@ -23,22 +23,22 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
             <div class="h6 text-secondary">Fecha Nacimiento</div>
-            <input class="form-control" type="date" value="2020-07-19" id="pfechaNac">
+            <input class="form-control" type="date" value="2020-07-19" ngModel name="pfechaNac">
         </div>
         <div class="col-sm-3" >
             <div class="h6 text-secondary">CURP</div>
-            <input type="text" class="form-control form-control-user text-uppercase" id="pCurp" >
+            <input type="text" class="form-control form-control-user text-uppercase" ngModel name="pCurp" >
         </div>
         <div class="col-sm-3">
             <div class="h6 text-secondary">Sexo</div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pMasculino" value="option1"> M
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="Sexo" value="Maculino"> M
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="pFmenino" value="option2"> F
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="Sexo" value="Femenino"> F
                 </label>
             </div>
         </div>   
@@ -48,7 +48,7 @@
         <div class="col-sm-1"></div>
         <div class="col-3">
             <div class="h6 text-secondary">Sueldo Promedio</div>
-            <input type="number" class="form-control form-control-user" id="pSueldo" >
+            <input type="number" class="form-control form-control-user" ngModel name="sueldo" >
         </div>
     </div>
     <br>

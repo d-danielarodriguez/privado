@@ -1,22 +1,21 @@
-<p>colonia works!</p>
 <div>
     <h1 class="h3 mb-0 text-secondary">Alta Colonia</h1>
 </div>
 <hr>
-<form > 
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"> 
     <div class="form-group row">
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Nombre</div>
-          <input type="text" class="form-control form-control-user" id="cName" >
+          <input type="text" class="form-control form-control-user" ngModel name="cName" >
         </div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Ciudad</div>
-          <input type="text" class="form-control form-control-user" id="cCiudad" >
+          <input type="text" class="form-control form-control-user" ngModel name="cCiudad" >
         </div>
         <div class="col-sm-3">
             <div class="h6 text-secondary">Estado</div>
-            <input type="text" class="form-control form-control-user" id="cEstado" >
+            <input type="text" class="form-control form-control-user" ngModel name="cEstado" >
           </div>
       </div>
 
@@ -24,11 +23,11 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-3" >
             <div class="h6 text-secondary">CP</div>
-            <input type="number" class="form-control form-control-user" id="cCp" >
+            <input type="number" class="form-control form-control-user" ngModel name="cCp" >
         </div>
         <div class="col-3">
             <div class="h6 text-secondary">Num. Lamparas Publicas</div>
-            <input type="number" class="form-control form-control-user" id="cLampPublic" >
+            <input type="number" class="form-control form-control-user" ngModel name="cLampPublic" >
         </div>
     </div>     
 

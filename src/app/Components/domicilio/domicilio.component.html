@@ -1,22 +1,21 @@
-<p>domicilio works!</p>
 <div>
     <h1 class="h3 mb-0 text-secondary">Alta Domicilio</h1>
 </div>
 <hr>
-<form > 
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"> 
     <div class="form-group row">
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Calle</div>
-          <input type="text" class="form-control form-control-user" id="dCalle" >
+          <input type="text" class="form-control form-control-user" ngModel name="Calle" >
         </div>
         <div class="col-3">
             <div class="h6 text-secondary">Numero</div>
-            <input type="number" class="form-control form-control-user" id="dNumero" >
+            <input type="number" class="form-control form-control-user" ngModel name="Numero" >
         </div>
         <div class="col-3">
             <div class="h6 text-secondary">CP.</div>
-            <input type="number" class="form-control form-control-user" id="dCP" >
+            <input type="number" class="form-control form-control-user" ngModel name="CP" >
         </div>
     </div>
 
@@ -26,12 +25,12 @@
             <div class="h6 text-secondary">Cuenta con energía renovable</div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dSi" value="option1"> Si
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tieneErnergReno" value="Si"> Si
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="dNo" value="option2"> No
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tieneErnergReno"  value="No"> No
                 </label>
             </div>
         </div>   
