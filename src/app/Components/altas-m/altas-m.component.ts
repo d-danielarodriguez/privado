@@ -45,8 +45,7 @@ const INFORMACION: Carta [] = [
     link:'planta',
     imagen: 'assets/planta.jpg'
   }
-
-]
+];
 
 @Component({
   selector: 'app-altas-m',

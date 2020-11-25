@@ -1,0 +1,70 @@
+<div class="container">
+    <div id="formulario">
+        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+            <input class="form-control" ngModel name="text" id="inputTxt" placeholder="Nombre de persona o calle">
+            <div class="form-check" ngbRadioGroup name="grupo" ngModel name="tipo" ngDefaultControl>
+                <div>
+                    <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1">
+                    <label class="form-check-label" for="r1" ngbButtonLabel>Persona</label>
+                </div>
+                <div>
+                    <input class="form-check-input" ngbButton type="radio" [value]="2" name="radios" id=r2>
+                    <label class="form-check-label" for="r2" ngbButtonLabel>Direccion</label>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">Buscar</button>
+        </form>
+    </div>
+
+    <hr><br><br>
+
+    <div *ngIf="personaActive" id="res-persona">
+        <table>
+            <thead>
+               <tr>
+                   <th>CURP</th>
+                   <th>Nombre</th>
+                   <th>Ver mas</th>
+                   <th>Modificar</th>
+                   <th>Eliminar</th>
+               </tr> 
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of info">
+                    <th>{{i.curp}}</th>
+                    <td>{{i.nombre+' '+i.ap_pat+' '+i.ap_mat}} </td>
+                    <td><button class="btn btn-dark" (click)="verPersona(i.curp)">ver</button></td>
+                    <td><button class="btn btn-dark" (click)="modificarPersona(i.curp)">modificar</button></td>
+                    <td><button class="btn btn-dark" (click)="eliminarPersona(i.curp)">eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="direccionActive" id="res-direccion">
+        <table>
+            <thead>
+               <tr>
+                   <th>Id</th>
+                   <th>Calle</th>
+                   <th>Ver mas</th>
+                   <th>Modificar</th>
+                   <th>Eliminar</th>
+               </tr> 
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of info">
+                    <th>{{i.id_domicilio}}</th>
+                    <td>{{i.calle}} </td>
+                    <td><button class="btn btn-dark" (click)="verDomicilio(i.id_domicilio)">ver</button></td>
+                    <td><button class="btn btn-dark" (click)="modificarDomicilio(i.id_domicilio)">modificar</button></td>
+                    <td><button class="btn btn-dark" (click)="eliminarDomicilio(i.id_domicilio)">eliminar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="errorActive">
+        <p>Elegir un tipo de busqueda</p>
+    </div>
+</div>
