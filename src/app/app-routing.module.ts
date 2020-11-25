@@ -1,3 +1,4 @@
+import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
 import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
 import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
 import { NgModule } from '@angular/core';
@@ -21,7 +22,7 @@ const routes: Routes = [
   {path: 'VistaPersona', component: VistaPersonaComponent},
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},
-  {path: 'CambioDireccion', component: CambioPersonaComponent}
+  {path: 'CambioDireccion', component: CambioDireccionComponent}
 ];
 
 @NgModule({

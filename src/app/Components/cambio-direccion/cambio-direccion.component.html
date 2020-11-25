@@ -1,1 +1,17 @@
-<p>cambio-direccion works!</p>
+<div class="container">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <table class="table table-dark table-striped table-bordered">
+            <tr>
+                <td>Nombre de Calle</td>
+                <td><input class="form-control" type="text" ngModel name="qnombre" [(ngModel)]="nameDirec"></td>
+            </tr>
+            <tr>
+                <td>Numero</td>
+                <td><input class="form-control" type="number" ngModel name="qnumero" [(ngModel)]="numDirec"></td>
+            </tr>
+            <tr>
+                <td colspan="2"><Button type="submit" class="btn btn-outline-light">Actualizar</Button></td>
+            </tr>
+        </table>
+    </form>
+</div>

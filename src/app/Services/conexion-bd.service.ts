@@ -39,6 +39,21 @@ export class ConexionBdService {
     const link = `${this.url}/buscar_domicilio/${nombre}`;
     return this.http.get(link).pipe(map((data: any) => data.array));
   }
+  
+  getDomicilio(id: string){
+    const link = `${this.url}/get_domicilio/${id}`;
+    return this.http.get(link).pipe(map((data: any) => data.array));
+  }
+
+  updateDomicilio(body: any){
+    const link = `${this.url}/update_domicilio`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
+  deleteDomicilio(id: string){
+    const link = `${this.url}/delete_domicilio/${id}`;
+    return this.http.delete(link).pipe(map((data: any) => data.array));
+  }
 
   // Funciones para compartir datos entre componentes
   cambiarLlave(llave: string){

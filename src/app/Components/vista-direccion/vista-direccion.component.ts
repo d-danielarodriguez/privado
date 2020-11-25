@@ -1,3 +1,4 @@
+import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class VistaDireccionComponent implements OnInit {
 
-  constructor() { }
+  id: string;
+  info: {
+    id_domicilio: number;
+    cp: number;
+    numero: number;
+    calle: string;
+    curp: string;
+  };
+
+  constructor(private bdService: ConexionBdService) { }
 
   ngOnInit(): void {
+    this.bdService.llaveActual.subscribe(llave => this.id = llave);
+    this.bdService.getDomicilio(this.id).subscribe((data: any) => {
+      this.info = data[0];
+    });
   }
 
 }
