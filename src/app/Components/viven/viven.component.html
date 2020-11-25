@@ -1,0 +1,25 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <table>
+            <thead>
+                <tr><td colspan="2">Relacionar Persona con Direccion</td></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>CURP de Persona</p>
+                        <input class="form-control" ngModel name="curp" placeholder="CURP">
+                    </td>
+                    <td>
+                        <p>ID de Direccion</p>
+                        <input type="number" class="form-control" ngModel name="idDirec" placeholder="Id">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="2"><button type="submit" class="btn btn-outline-dark">Relacionar</button></td></tr>
+            </tfoot>
+        </table>
+    </form>
+    
+</div>

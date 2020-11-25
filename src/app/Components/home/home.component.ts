@@ -13,17 +13,17 @@ const INFORMACION: Carta [] = [
   {
     titulo: 'Sub-menú altas',
     descripcion: 'Genera altas mediante nuestros formularios',
-    link:'subAltas',
+    link: 'subAltas',
     imagen: 'assets/altas.jpg'
   },
   {
     titulo: 'Sub-menú busqueda',
     descripcion: 'Consulta, elimina o modifica información',
-    link:'',
+    link: 'Busqueda',
     imagen: 'assets/upview.jpg'
   }
 
-]
+];
 
 @Component({
   selector: 'app-home',

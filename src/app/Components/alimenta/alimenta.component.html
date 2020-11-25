@@ -1,0 +1,25 @@
+<div class="container">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <table>
+            <thead>
+                <tr><td colspan="2">Relacionar Planta con colonia que alimenta</td></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Id de Planta</p>
+                        <input type="number" class="form-control" ngModel name="idPlanta" placeholder="Id">
+                    </td>
+                    <td>
+                        <p>Codigo Postal de la Colonia</p>
+                        <input type="number" class="form-control" ngModel name="codPost" placeholder="Codigo Postal">
+                    </td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr><td colspan="2"><button type="submit" class="btn btn-outline-dark">Relacionar</button></td></tr>
+            </tfoot>
+        </table>
+    </form>
+    
+</div>
