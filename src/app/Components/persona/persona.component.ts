@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-persona',
@@ -7,18 +9,24 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./persona.component.css']
 })
 export class PersonaComponent implements OnInit {
-  query: { Nombres: any; pPaterno: any; pMaterno: any; pfechaNac: any; pCurp: any; Sexo: any; sueldo:any;};
-
-  constructor() { }
+  constructor(private bdService: ConexionBdService, private router: Router) {}
 
   ngOnInit(): void {
   }
   onSubmit(form: NgForm){
-    const {Nombres,pPaterno,pMaterno,pfechaNac
-      ,pCurp,Sexo,sueldo} = form.value;
-    this.query={Nombres,pPaterno,pMaterno,pfechaNac
-      ,pCurp,Sexo,sueldo};
-    console.log(this.query)
+    const {pCurp, sueldo,Nombres,pPaterno,pMaterno,pfechaNac} = form.value;
+    const body = {
+      curp:pCurp,
+      sueldo:sueldo,
+      nombre:Nombres,
+      ap_pat:pPaterno,
+      ap_mat:pMaterno,
+      fech_nac:pfechaNac
+    };
+    this.bdService.createPersona(body).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(['/subAltas']);
   }
 
 }

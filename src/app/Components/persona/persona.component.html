@@ -7,15 +7,15 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Nombre(s)</div>
-          <input type="text" class="form-control form-control-user" ngModel name="Nombres" >
+          <input type="text" class="form-control" ngModel name="Nombres" >
         </div>
         <div class="col-sm-3">
           <div class="h6 text-secondary">Apellido Paterno</div>
-          <input type="text" class="form-control form-control-user" ngModel name="pPaterno" >
+          <input type="text" class="form-control" ngModel name="pPaterno" >
         </div>
         <div class="col-sm-3">
             <div class="h6 text-secondary">Apellidos Materno</div>
-            <input type="text" class="form-control form-control-user" ngModel name="pMaterno" >
+            <input type="text" class="form-control" ngModel name="pMaterno" >
           </div>
       </div>
 
@@ -23,32 +23,19 @@
         <div class="col-sm-1"></div>
         <div class="col-sm-4">
             <div class="h6 text-secondary">Fecha Nacimiento</div>
-            <input class="form-control" type="date" value="2020-07-19" ngModel name="pfechaNac">
+            <input class="form-control" type="date" ngModel name="pfechaNac">
         </div>
         <div class="col-sm-3" >
             <div class="h6 text-secondary">CURP</div>
-            <input type="text" class="form-control form-control-user text-uppercase" ngModel name="pCurp" >
-        </div>
-        <div class="col-sm-3">
-            <div class="h6 text-secondary">Sexo</div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="Sexo" value="Maculino"> M
-                </label>
-            </div>
-            <div class="form-check form-check-inline">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="Sexo" value="Femenino"> F
-                </label>
-            </div>
-        </div>   
+            <input type="text" class="form-control" ngModel name="pCurp" >
+        </div>  
     </div>
         
     <div class="form-group row">
         <div class="col-sm-1"></div>
         <div class="col-3">
             <div class="h6 text-secondary">Sueldo Promedio</div>
-            <input type="number" class="form-control form-control-user" ngModel name="sueldo" >
+            <input type="number" class="form-control" ngModel name="sueldo" >
         </div>
     </div>
     <br>

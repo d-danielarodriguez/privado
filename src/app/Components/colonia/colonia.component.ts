@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-colonia',
@@ -7,18 +9,24 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./colonia.component.css']
 })
 export class ColoniaComponent implements OnInit {
-  query: { cName: any; cCiudad: any; cEstado: any; cCp: any; cLampPublic: any; };
-
-  constructor() { }
+  constructor(private bdService: ConexionBdService, private router: Router) {}
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
-    const {cName,cCiudad,cEstado,cCp
-      ,cLampPublic} = form.value;
-    this.query={cName,cCiudad,cEstado,cCp
-      ,cLampPublic};
-    console.log(this.query)
+    const {cCp,cName,cEstado,cCiudad,cLampPublic} = form.value;
+    const body = {
+      cp:cCp,
+      nombre:cName,
+      estado:cEstado,
+      ciudad:cCiudad,
+      num_lamp_publicas:cLampPublic
+    };
+    this.bdService.createColonia(body).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(['/subAltas']);
   }
+  
 }
