@@ -1,0 +1,68 @@
+<div>
+    <h1 class="h3 mb-0 text-secondary">Alta Planta</h1>
+</div>
+<hr>
+<form (ngSubmit)="onSubmit(form)" #form="ngForm"> 
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Cantidad de energía generada</div>
+          <input type="number" class="form-control " ngModel name="cantEnergGen">
+        </div>
+        <div class="col-sm-3">
+          <div class="h6 text-secondary">Recurso del que se alimenta</div>
+          <input type="text" class="form-control " ngModel name="recursoUtiliza">
+        </div>
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Emisiones Generadas</div>
+            <input type="number" class="form-control" ngModel name="emisionesGen">
+          </div>
+      </div>
+
+    <div class="form-group row">
+        <div class="col-sm-1"></div>
+        
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Tipo de Planta</div>
+            <div class="form" >
+              <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="industrial"> Industrial
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="renovable"> Renovable
+                </label>
+            </div>
+            </div>
+        </div>   
+
+        <div class="col-sm-3">
+            <div class="h6 text-secondary">Tipo de Energía</div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="solar"> Solar
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="eolica"> Eólica
+                </label>
+            </div>
+            <div class="form-check form-check-inline">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="hidraulica"> Hidráulica
+                </label>
+            </div>
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">
+        <div class="col-sm-1"></div>
+        <div class="col-sm-1">
+            <button type="submit" class="btn-success">Guardar</button> 
+        </div>
+    </div>
+  </form>

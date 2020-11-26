@@ -9,6 +9,14 @@ import { HomeComponent } from './Components/home/home.component';
 import { VivenComponent } from './Components/viven/viven.component';
 import { AltasMComponent } from './Components/altas-m/altas-m.component';
 import { PersonaComponent } from './Components/persona/persona.component';
+<<<<<<< HEAD
+import { ReciboComponent } from './Components/recibo/recibo.component';
+import { PlantaComponent } from './Components/planta/planta.component';
+import { DomicilioComponent } from './Components/domicilio/domicilio.component';
+import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
+import { ColoniaComponent } from './Components/colonia/colonia.component';
+=======
+>>>>>>> 6fecdde20a88731f5df90d8b7410c0280c27c195
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
 
 
@@ -18,7 +26,16 @@ const routes: Routes = [
   {path: 'Viven', component: VivenComponent},
   {path: 'Alimenta', component: AlimentaComponent},
   {path: 'subAltas', component: AltasMComponent},
+<<<<<<< HEAD
+  {path: 'persona', component:PersonaComponent},
+  {path: 'recibo', component:ReciboComponent},
+  {path: 'planta', component:PlantaComponent},
+  {path: 'domicilio', component:DomicilioComponent},
+  {path: 'dispositivo', component:DispositivoComponent},
+  {path: 'colonia', component:ColoniaComponent},
+=======
   {path: 'persona', component: PersonaComponent},
+>>>>>>> 6fecdde20a88731f5df90d8b7410c0280c27c195
   {path: 'VistaPersona', component: VistaPersonaComponent},
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},

@@ -10,18 +10,26 @@ import { VivenComponent } from './Components/viven/viven.component';
 import { AlimentaComponent } from './Components/alimenta/alimenta.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AltasMComponent } from './Components/altas-m/altas-m.component';
-import { HeaderComponent } from './Components/header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ReciboComponent } from './Components/recibo/recibo.component';
 import { PersonaComponent } from './Components/persona/persona.component';
 import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
 import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
 import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
+import { PlantaComponent } from './Components/planta/planta.component';
+import { DomicilioComponent } from './Components/domicilio/domicilio.component';
+import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
+import { ColoniaComponent } from './Components/colonia/colonia.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
     AppComponent,
+    AltasMComponent,
+    HeaderComponent,
     HomeComponent,
+    ReciboComponent,
     BusquedaComponent,
     VivenComponent,
     AlimentaComponent,
@@ -31,7 +39,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     VistaPersonaComponent,
     VistaDireccionComponent,
     CambioPersonaComponent,
-    CambioDireccionComponent
+    CambioDireccionComponent,
+    PlantaComponent,
+    DomicilioComponent,
+    DispositivoComponent,
+    ColoniaComponent
   ],
   imports: [
     BrowserModule,
