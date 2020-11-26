@@ -15,6 +15,11 @@ export class ConexionBdService {
 
   constructor(private http: HttpClient) { }
 
+  createRecibo(body: any){
+    const link = `${this.url}/put_recibo`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
   buscarPersona(nombre: string){
     const link = `${this.url}/buscar_persona/${nombre}`;
     return this.http.get(link).pipe(map((data: any) => data.array));
@@ -39,7 +44,7 @@ export class ConexionBdService {
     const link = `${this.url}/buscar_domicilio/${nombre}`;
     return this.http.get(link).pipe(map((data: any) => data.array));
   }
-  
+
   getDomicilio(id: string){
     const link = `${this.url}/get_domicilio/${id}`;
     return this.http.get(link).pipe(map((data: any) => data.array));
@@ -53,6 +58,16 @@ export class ConexionBdService {
   deleteDomicilio(id: string){
     const link = `${this.url}/delete_domicilio/${id}`;
     return this.http.delete(link).pipe(map((data: any) => data.array));
+  }
+
+  createViven(body: any){
+    const link = `${this.url}/create_viven`;
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
+  }
+
+  createAlimenta(body: any){
+    const link = `${this.url}/create_alimenta`;
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
   // Funciones para compartir datos entre componentes

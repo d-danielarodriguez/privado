@@ -3,15 +3,15 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AltasMComponent } from './Components/altas-m/altas-m.component';
-import { HeaderComponent } from './components/header/header.component';
-import { ReciboComponent } from './Components/recibo/recibo.component';
 import { HomeComponent } from './Components/home/home.component';
 import { BusquedaComponent } from './Components/busqueda/busqueda.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { VivenComponent } from './Components/viven/viven.component';
 import { AlimentaComponent } from './Components/alimenta/alimenta.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AltasMComponent } from './Components/altas-m/altas-m.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ReciboComponent } from './Components/recibo/recibo.component';
 import { PersonaComponent } from './Components/persona/persona.component';
 import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
@@ -21,6 +21,7 @@ import { PlantaComponent } from './Components/planta/planta.component';
 import { DomicilioComponent } from './Components/domicilio/domicilio.component';
 import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
 import { ColoniaComponent } from './Components/colonia/colonia.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -43,14 +44,14 @@ import { ColoniaComponent } from './Components/colonia/colonia.component';
     DomicilioComponent,
     DispositivoComponent,
     ColoniaComponent
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

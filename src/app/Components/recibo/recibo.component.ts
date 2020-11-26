@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-//import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-recibo',
@@ -8,10 +9,8 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./recibo.component.css']
 })
 export class ReciboComponent implements OnInit {
-  query: { fecha: any; cantEnerg: any; cantPagar: any; };
-
-  constructor() { }
- //constructor(private bdService: ConexionBdService) {}
+ 
+  constructor(private bdService: ConexionBdService, private router: Router) {}
   ngOnInit(): void {
   }
   //this.http.post<any>('https://jsonplaceholder.typicode.com/posts', { title: 'Angular POST Request Example' }).subscribe(data => {
@@ -24,8 +23,16 @@ export class ReciboComponent implements OnInit {
     //});
   //}
   onSubmit(form: NgForm){
-    const {fecha, cantEnerg, cantPagar} = form.value;
-    this.query={fecha, cantEnerg, cantPagar};
-    console.log(this.query)
+    const {id_domicilio,fecha, cantEnerg, cantPagar} = form.value;
+    const body = {
+      id_domicilio: id_domicilio,
+      fecha: fecha,
+      consumo_energia: cantEnerg,
+      cant_pagar: cantPagar
+    };
+    this.bdService.createRecibo(body).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(['/SubAltas']);
   }
 }
