@@ -1,23 +1,23 @@
 <div class="container">
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-        <table>
-            <thead>
-                <tr><td colspan="2">Relacionar Persona con Direccion</td></tr>
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
+                <tr><th colspan="2">Relacionar Persona con Direccion</th></tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
                         <p>CURP de Persona</p>
-                        <input class="form-control" ngModel name="curp" placeholder="CURP">
+                        <input class="form-control" ngModel name="qcurp" placeholder="CURP">
                     </td>
                     <td>
-                        <p>ID de Direccion</p>
-                        <input type="number" class="form-control" ngModel name="idDirec" placeholder="Id">
+                        <p>ID de Domicilio</p>
+                        <input type="number" class="form-control" ngModel name="qidDirec" placeholder="Id">
                     </td>
                 </tr>
             </tbody>
             <tfoot>
-                <tr><td colspan="2"><button type="submit" class="btn btn-outline-dark">Relacionar</button></td></tr>
+                <tr><td colspan="2" class="text-center"><button type="submit" class="btn btn-outline-dark">Relacionar</button></td></tr>
             </tfoot>
         </table>
     </form>

@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { faEye, faEdit, faTimesCircle} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-busqueda',
@@ -14,6 +15,10 @@ export class BusquedaComponent implements OnInit {
   direccionActive = false;
   errorActive = false;
   info = [];
+
+  faEye = faEye;
+  faEdit = faEdit;
+  faTimesCircle = faTimesCircle;
 
   idPrueba = 5;
 
@@ -58,17 +63,17 @@ export class BusquedaComponent implements OnInit {
   }
 
   verDomicilio(id: number){
-    console.log('Click en ver mas', id);
     this.bdService.cambiarLlave(id.toString());
     this.router.navigate(['/VistaDireccion']);
   }
   modificarDomicilio(id: number){
-    console.log('Click en modificar', id);
     this.bdService.cambiarLlave(id.toString());
     this.router.navigate(['/CambioDireccion']);
   }
   eliminarDomicilio(id: number){
-    console.log('Click en eliminar', id);
+    this.bdService.deleteDomicilio(id.toString()).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
 }

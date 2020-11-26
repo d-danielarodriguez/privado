@@ -1,3 +1,4 @@
+import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
@@ -7,17 +8,21 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./alimenta.component.css']
 })
 export class AlimentaComponent implements OnInit {
-  relacion: { idPlanta: any; codPost: any; };
 
-  constructor() { }
+  constructor(private bdService: ConexionBdService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
-    const {idPlanta, codPost} = form.value;
-    this.relacion = {idPlanta, codPost};
-    console.log(this.relacion);
+    const {qidPlanta, qcodPost} = form.value;
+    const body = {
+      id_planta: qidPlanta,
+      cp: qcodPost
+    };
+    this.bdService.createAlimenta(body).subscribe((data: any) => {
+      console.log(data);
+    });
   }
 
 }
