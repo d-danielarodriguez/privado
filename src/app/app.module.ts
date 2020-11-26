@@ -16,6 +16,7 @@ import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
 import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
 import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-d
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

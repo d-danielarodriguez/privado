@@ -1,26 +1,39 @@
-<div class="container">
-    <div id="formulario">
-        <form (ngSubmit)="onSubmit(form)" #form="ngForm">
-            <input class="form-control" ngModel name="text" id="inputTxt" placeholder="Nombre de persona o calle">
-            <div class="form-check" ngbRadioGroup name="grupo" ngModel name="tipo" ngDefaultControl>
-                <div>
-                    <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1">
-                    <label class="form-check-label" for="r1" ngbButtonLabel>Persona</label>
-                </div>
-                <div>
-                    <input class="form-check-input" ngbButton type="radio" [value]="2" name="radios" id=r2>
-                    <label class="form-check-label" for="r2" ngbButtonLabel>Direccion</label>
-                </div>
-            </div>
-            <button type="submit" class="btn btn-outline-dark">Buscar</button>
-        </form>
-    </div>
+<div class="container mb-5">
+    <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr><th>Buscador</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <input class="form-control" ngModel name="text" id="inputTxt" placeholder="Nombre de persona o calle">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="text-center" ngbRadioGroup name="grupo" ngModel name="tipo" ngDefaultControl>
+                            <div class="form-check form-check-inline mx-4">
+                                <input class="form-check-input" ngbButton type="radio" [value]="1" name="radios" id="r1">
+                                <label class="form-check-label" for="r1" ngbButtonLabel>Persona</label>
+                            </div>
+                            <div class="form-check form-check-inline mx-4">
+                                <input class="form-check-input" ngbButton type="radio" [value]="2" name="radios" id=r2>
+                                <label class="form-check-label" for="r2" ngbButtonLabel>Direccion</label>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr><td class="text-center"><button type="submit" class="btn btn-outline-dark">Buscar</button></td></tr>
+            </tbody>
+        </table>
+    </form>
 
     <hr><br><br>
 
     <div *ngIf="personaActive" id="res-persona">
-        <table>
-            <thead>
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
                <tr>
                    <th>CURP</th>
                    <th>Nombre</th>
@@ -33,17 +46,23 @@
                 <tr *ngFor="let i of info">
                     <th>{{i.curp}}</th>
                     <td>{{i.nombre+' '+i.ap_pat+' '+i.ap_mat}} </td>
-                    <td><button class="btn btn-dark" (click)="verPersona(i.curp)">ver</button></td>
-                    <td><button class="btn btn-dark" (click)="modificarPersona(i.curp)">modificar</button></td>
-                    <td><button class="btn btn-dark" (click)="eliminarPersona(i.curp)">eliminar</button></td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="verPersona(i.curp)"><fa-icon [icon]="faEye"></fa-icon></button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="modificarPersona(i.curp)"><fa-icon [icon]="faEdit"></fa-icon></button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="eliminarPersona(i.curp)"><fa-icon [icon]="faTimesCircle"></fa-icon></button>
+                    </td>
                 </tr>
             </tbody>
         </table>
     </div>
 
     <div *ngIf="direccionActive" id="res-direccion">
-        <table>
-            <thead>
+        <table class="table table-striped table-bordered table-hover">
+            <thead class="thead-dark">
                <tr>
                    <th>Id</th>
                    <th>Calle</th>
@@ -56,9 +75,15 @@
                 <tr *ngFor="let i of info">
                     <th>{{i.id_domicilio}}</th>
                     <td>{{i.calle}} </td>
-                    <td><button class="btn btn-dark" (click)="verDomicilio(i.id_domicilio)">ver</button></td>
-                    <td><button class="btn btn-dark" (click)="modificarDomicilio(i.id_domicilio)">modificar</button></td>
-                    <td><button class="btn btn-dark" (click)="eliminarDomicilio(i.id_domicilio)">eliminar</button></td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="verDomicilio(i.id_domicilio)"><fa-icon [icon]="faEye"></fa-icon></button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="modificarDomicilio(i.id_domicilio)"><fa-icon [icon]="faEdit"></fa-icon></button>
+                    </td>
+                    <td class="text-center">
+                        <button class="btn btn-dark" (click)="eliminarDomicilio(i.id_domicilio)"><fa-icon [icon]="faTimesCircle"></fa-icon></button>
+                    </td>
                 </tr>
             </tbody>
         </table>

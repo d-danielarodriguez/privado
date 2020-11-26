@@ -2,6 +2,7 @@ import { Router } from '@angular/router';
 import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { faEye, faEdit, faTimesCircle} from '@fortawesome/free-regular-svg-icons';
 
 @Component({
   selector: 'app-busqueda',
@@ -14,6 +15,10 @@ export class BusquedaComponent implements OnInit {
   direccionActive = false;
   errorActive = false;
   info = [];
+
+  faEye = faEye;
+  faEdit = faEdit;
+  faTimesCircle = faTimesCircle;
 
   idPrueba = 5;
 
