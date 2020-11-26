@@ -15,6 +15,31 @@ export class ConexionBdService {
 
   constructor(private http: HttpClient) { }
 
+  createColonia(body: any){
+    const link = `${this.url}/put_colonia`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
+  createDispositivo(body: any){
+    const link = `${this.url}/put_disp`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
+  createDomicilio(body: any){
+    const link = `${this.url}/put_domicilio`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }//no quiere dar de alta, errores en el html consola
+
+  createPersona(body: any){
+    const link = `${this.url}/put_persona`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }//no quiere dar de alta a la persona
+
+  createPlanta(body: any){
+    const link = `${this.url}/put_planta`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
   createRecibo(body: any){
     const link = `${this.url}/put_recibo`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));

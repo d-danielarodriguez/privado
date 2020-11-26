@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dispositivo',
@@ -9,15 +11,24 @@ import { NgForm } from '@angular/forms';
 export class DispositivoComponent implements OnInit {
   query: { num: any; tipoEnergia: any; dCantEnerg: any; };
 
-  constructor() { }
+  constructor(private bdService: ConexionBdService, private router: Router) {}
 
   ngOnInit(): void {
   }
 
+  
   onSubmit(form: NgForm){
-    const {num,tipoEnergia,dCantEnerg} = form.value;
-    this.query={num,tipoEnergia,dCantEnerg};
-    console.log(this.query)
+    const {num,id_domicilioo,dCantEnerg,tipoEnergia} = form.value;
+    const body = {
+      numero_disp: num,
+      id_domicilio: id_domicilioo,
+      energia_generada:dCantEnerg,
+      tipo_renovable: tipoEnergia
+    };
+    this.bdService.createDispositivo(body).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(['/subAltas']);
   }
 
 }

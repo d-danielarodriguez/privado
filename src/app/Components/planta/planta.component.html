@@ -27,12 +27,12 @@
             <div class="form" >
               <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="industrial"> Industrial
+                  <input class="form-check-input" type="radio" ngModel name="tipoPlanta" value="i"> Industrial
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="tipoPlanta" value="renovable"> Renovable
+                  <input class="form-check-input" type="radio"  ngModel name="tipoPlanta" value="r"> Renovable
                 </label>
             </div>
             </div>
@@ -42,20 +42,27 @@
             <div class="h6 text-secondary">Tipo de Energía</div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="solar"> Solar
+                  <input class="form-check-input" type="radio"  ngModel name="TipoE" value="s"> Solar
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="eolica"> Eólica
+                  <input class="form-check-input" type="radio" ngModel name="TipoE" value="e"> Eólica
                 </label>
             </div>
             <div class="form-check form-check-inline">
                 <label class="form-check-label">
-                  <input class="form-check-input" type="radio" name="inlineRadioOptions" ngModel name="TipoE" value="hidraulica"> Hidráulica
+                  <input class="form-check-input" type="radio" ngModel name="TipoE" value="h"> Hidráulica
                 </label>
             </div>
         </div>
+        <div class="row">
+          <div class="col-sm-1"></div>
+          <div class="col">
+              <div class="h6 text-secondary">Id Domiclio</div>
+              <input type="number" class="form-control " ngModel name="id_domicilio" >
+          </div> 
+      </div>
     </div>
     <br>
     

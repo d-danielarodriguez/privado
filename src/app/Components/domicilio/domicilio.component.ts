@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { ConexionBdService } from './../../Services/conexion-bd.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-domicilio',
@@ -7,16 +9,25 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./domicilio.component.css']
 })
 export class DomicilioComponent implements OnInit {
-  query: { Calle: any; Numero: any; CP: any; tieneErnergReno: any; };
-
-  constructor() { }
+  
+  constructor(private bdService: ConexionBdService, private router: Router) { }
+  //constructor(private bdService: ConexionBdService) {}
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
-    const {Calle,Numero,CP,tieneErnergReno} = form.value;
-    this.query={Calle,Numero,CP,tieneErnergReno};
-    console.log(this.query)
+    const {CP,Numero,Calle,curpD} = form.value;
+    const body = {
+      
+      cp:CP,
+      numero: Numero,
+      calle:Calle,
+      curp: curpD
+    };
+    this.bdService.createDomicilio(body).subscribe((data: any) => {
+      console.log(data);
+    });
+    this.router.navigate(['/subAltas']);
   }
 }

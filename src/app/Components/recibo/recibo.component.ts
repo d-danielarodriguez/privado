@@ -27,12 +27,12 @@ export class ReciboComponent implements OnInit {
     const body = {
       id_domicilio: id_domicilio,
       fecha: fecha,
-      consumo_energia: cantEnerg,
+      consumo_energia:cantEnerg,
       cant_pagar: cantPagar
     };
     this.bdService.createRecibo(body).subscribe((data: any) => {
       console.log(data);
     });
-    this.router.navigate(['/SubAltas']);
+    this.router.navigate(['/subAltas']);
   }
 }
