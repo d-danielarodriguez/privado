@@ -44,6 +44,18 @@ const INFORMACION: Carta [] = [
     descripcion: '',
     link:'planta',
     imagen: 'assets/planta.jpg'
+  },
+  {
+    titulo: 'Viven',
+    descripcion: '',
+    link:'Viven',
+    imagen: 'assets/viven.jpeg'
+  },
+  {
+    titulo: 'Alimenta',
+    descripcion: '',
+    link:'Alimenta',
+    imagen: 'assets/alimenta.jpeg'
   }
 ];
 

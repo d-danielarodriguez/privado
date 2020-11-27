@@ -18,14 +18,16 @@ export class VistaPersonaComponent implements OnInit {
     fech_nac: string;
   };
 
-  constructor(private bdService: ConexionBdService) {}
-
-  ngOnInit(): void {
+  constructor(private bdService: ConexionBdService) {
     this.bdService.llaveActual.subscribe(llave => this.curp = llave);
     this.bdService.getPersona(this.curp).subscribe((data: any) => {
       this.info = data[0];
       this.info.fech_nac = this.info.fech_nac.substring(0, 10);
     });
+  }
+
+  ngOnInit(): void {
+    
   }
 
 }
