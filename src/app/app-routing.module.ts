@@ -1,8 +1,8 @@
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
 import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
 import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { AlimentaComponent } from './Components/alimenta/alimenta.component';
 import { BusquedaComponent } from './Components/busqueda/busqueda.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -23,12 +23,12 @@ const routes: Routes = [
   {path: 'Viven', component: VivenComponent},
   {path: 'Alimenta', component: AlimentaComponent},
   {path: 'subAltas', component: AltasMComponent},
-  {path: 'persona', component:PersonaComponent},
-  {path: 'recibo', component:ReciboComponent},
-  {path: 'planta', component:PlantaComponent},
-  {path: 'domicilio', component:DomicilioComponent},
-  {path: 'dispositivo', component:DispositivoComponent},
-  {path: 'colonia', component:ColoniaComponent},
+  {path: 'persona', component: PersonaComponent},
+  {path: 'recibo', component: ReciboComponent},
+  {path: 'planta', component: PlantaComponent},
+  {path: 'domicilio', component: DomicilioComponent},
+  {path: 'dispositivo', component: DispositivoComponent},
+  {path: 'colonia', component: ColoniaComponent},
   {path: 'VistaPersona', component: VistaPersonaComponent},
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},

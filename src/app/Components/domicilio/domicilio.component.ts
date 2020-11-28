@@ -9,20 +9,19 @@ import { Router } from '@angular/router';
   styleUrls: ['./domicilio.component.css']
 })
 export class DomicilioComponent implements OnInit {
-  
+
   constructor(private bdService: ConexionBdService, private router: Router) { }
-  //constructor(private bdService: ConexionBdService) {}
+  // constructor(private bdService: ConexionBdService) {}
 
   ngOnInit(): void {
   }
 
   onSubmit(form: NgForm){
-    const {CP,Numero,Calle,curpD} = form.value;
+    const {CP, Numero, Calle, curpD} = form.value;
     const body = {
-      
-      cp:CP,
+      cp: CP,
       numero: Numero,
-      calle:Calle,
+      calle: Calle,
       curp: curpD
     };
     this.bdService.createDomicilio(body).subscribe((data: any) => {

@@ -12,49 +12,49 @@ const INFORMACION: Carta [] = [
   {
     titulo: 'Recibo Form',
     descripcion: '',
-    link:'recibo',
+    link: 'recibo',
     imagen: 'assets/recibo.jpg'
   },
   {
     titulo: 'Persona Form',
     descripcion: 'persona',
-    link:'persona',
+    link: 'persona',
     imagen: 'assets/person.jpg'
   },
   {
     titulo: 'Colonia Form',
     descripcion: '',
-    link:'colonia',
+    link: 'colonia',
     imagen: 'assets/colo.jpg'
   },
   {
     titulo: 'Domicilio Form',
     descripcion: '',
-    link:'domicilio',
+    link: 'domicilio',
     imagen: 'assets/domicilio.jpg'
   },
   {
     titulo: 'Dispositivo Form',
     descripcion: '',
-    link:'dispositivo',
+    link: 'dispositivo',
     imagen: 'assets/dispo_energ.jpg'
   },
   {
     titulo: 'Planta Form',
     descripcion: '',
-    link:'planta',
+    link: 'planta',
     imagen: 'assets/planta.jpg'
   },
   {
     titulo: 'Viven',
     descripcion: '',
-    link:'Viven',
+    link: 'Viven',
     imagen: 'assets/viven.jpeg'
   },
   {
     titulo: 'Alimenta',
     descripcion: '',
-    link:'Alimenta',
+    link: 'Alimenta',
     imagen: 'assets/alimenta.jpeg'
   }
 ];

@@ -28,12 +28,12 @@ export class ConexionBdService {
   createDomicilio(body: any){
     const link = `${this.url}/put_domicilio`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
-  }//no quiere dar de alta, errores en el html consola
+  }// no quiere dar de alta, errores en el html consola
 
   createPersona(body: any){
     const link = `${this.url}/put_persona`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
-  }//no quiere dar de alta a la persona
+  }// no quiere dar de alta a la persona
 
   createPlanta(body: any){
     const link = `${this.url}/put_planta`;

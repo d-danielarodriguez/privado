@@ -14,14 +14,14 @@ export class PersonaComponent implements OnInit {
   ngOnInit(): void {
   }
   onSubmit(form: NgForm){
-    const {pCurp, sueldo,Nombres,pPaterno,pMaterno,pfechaNac} = form.value;
+    const {pCurp, psueldo, Nombres, pPaterno, pMaterno, pfechaNac} = form.value;
     const body = {
-      curp:pCurp,
-      sueldo:sueldo,
-      nombre:Nombres,
-      ap_pat:pPaterno,
-      ap_mat:pMaterno,
-      fech_nac:pfechaNac
+      curp: pCurp,
+      sueldo: psueldo,
+      nombre: Nombres,
+      ap_pat: pPaterno,
+      ap_mat: pMaterno,
+      fech_nac: pfechaNac
     };
     this.bdService.createPersona(body).subscribe((data: any) => {
       console.log(data);

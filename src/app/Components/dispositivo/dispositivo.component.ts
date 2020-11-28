@@ -16,13 +16,12 @@ export class DispositivoComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  
   onSubmit(form: NgForm){
-    const {num,id_domicilioo,dCantEnerg,tipoEnergia} = form.value;
+    const {num, id_domicilioo, dCantEnerg, tipoEnergia} = form.value;
     const body = {
       numero_disp: num,
       id_domicilio: id_domicilioo,
-      energia_generada:dCantEnerg,
+      energia_generada: dCantEnerg,
       tipo_renovable: tipoEnergia
     };
     this.bdService.createDispositivo(body).subscribe((data: any) => {
@@ -30,5 +29,4 @@ export class DispositivoComponent implements OnInit {
     });
     this.router.navigate(['/subAltas']);
   }
-
 }
