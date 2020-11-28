@@ -18,9 +18,8 @@ export class DispositivoComponent implements OnInit {
 
   
   onSubmit(form: NgForm){
-    const {num,id_domicilioo,dCantEnerg,tipoEnergia} = form.value;
+    const {id_domicilioo,dCantEnerg,tipoEnergia} = form.value;
     const body = {
-      numero_disp: num,
       id_domicilio: id_domicilioo,
       energia_generada:dCantEnerg,
       tipo_renovable: tipoEnergia
