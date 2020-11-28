@@ -11,49 +11,49 @@ interface Carta {
 const INFORMACION: Carta [] = [
   {
     titulo: 'Recibo Form',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Recibo", recuerda verificar antes de un subbmit',
     link:'recibo',
     imagen: 'assets/recibo.jpg'
   },
   {
     titulo: 'Persona Form',
-    descripcion: 'persona',
+    descripcion: 'Alta para el formato "Persona", recuerda verificar antes de un subbmit',
     link:'persona',
     imagen: 'assets/person.jpg'
   },
   {
     titulo: 'Colonia Form',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Colonia", recuerda verificar antes de un subbmit',
     link:'colonia',
     imagen: 'assets/colo.jpg'
   },
   {
     titulo: 'Domicilio Form',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Domicilio", recuerda verificar antes de un subbmit',
     link:'domicilio',
     imagen: 'assets/domicilio.jpg'
   },
   {
     titulo: 'Dispositivo Form',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Dispositivo", recuerda verificar antes de un subbmit',
     link:'dispositivo',
     imagen: 'assets/dispo_energ.jpg'
   },
   {
     titulo: 'Planta Form',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Planta", recuerda verificar antes de un subbmit',
     link:'planta',
     imagen: 'assets/planta.jpg'
   },
   {
     titulo: 'Viven',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Viven", recuerda verificar antes de un subbmit',
     link:'Viven',
     imagen: 'assets/viven.jpeg'
   },
   {
     titulo: 'Alimenta',
-    descripcion: '',
+    descripcion: 'Alta para el formato "Alimenta", recuerda verificar antes de un subbmit',
     link:'Alimenta',
     imagen: 'assets/alimenta.jpeg'
   }
