@@ -32,7 +32,8 @@ const routes: Routes = [
   {path: 'VistaPersona', component: VistaPersonaComponent},
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},
-  {path: 'CambioDireccion', component: CambioDireccionComponent}
+  {path: 'CambioDireccion', component: CambioDireccionComponent},
+  { path: '**', pathMatch: 'full', redirectTo: 'Home' }
 ];
 
 @NgModule({
