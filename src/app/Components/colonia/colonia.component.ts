@@ -15,18 +15,17 @@ export class ColoniaComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    const {cCp,cName,cEstado,cCiudad,cLampPublic} = form.value;
+    const {cCp, cName, cEstado, cCiudad, cLampPublic} = form.value;
     const body = {
-      cp:cCp,
-      nombre:cName,
-      estado:cEstado,
-      ciudad:cCiudad,
-      num_lamp_publicas:cLampPublic
+      cp: cCp,
+      nombre: cName,
+      estado: cEstado,
+      ciudad: cCiudad,
+      num_lamp_publicas: cLampPublic
     };
     this.bdService.createColonia(body).subscribe((data: any) => {
       console.log(data);
     });
     this.router.navigate(['/subAltas']);
   }
-  
 }

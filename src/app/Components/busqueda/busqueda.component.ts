@@ -60,6 +60,7 @@ export class BusquedaComponent implements OnInit {
     this.bdService.deletePersona(curp).subscribe((data: any) => {
       console.log(data);
     });
+    window.location.reload();
   }
 
   verDomicilio(id: number){
@@ -74,6 +75,11 @@ export class BusquedaComponent implements OnInit {
     this.bdService.deleteDomicilio(id.toString()).subscribe((data: any) => {
       console.log(data);
     });
+    window.location.reload();
+  }
+
+  regresar(){
+    this.router.navigate(['/Home']);
   }
 
 }

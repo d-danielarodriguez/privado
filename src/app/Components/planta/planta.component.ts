@@ -16,14 +16,14 @@ export class PlantaComponent implements OnInit {
   }
 
   onSubmit(form: NgForm){
-    const {tipoPlanta,recursoUtiliza,TipoE,cantEnergGen,emisionesGen,id_domicilio} = form.value;
+    const {tipoPlanta, recursoUtiliza, TipoE, cantEnergGen, emisionesGen, pid_domicilio} = form.value;
     const body = {
-      tipo_renovable:TipoE,
+      tipo_renovable: TipoE,
       recurso_alim: recursoUtiliza,
-      tipo_planta:tipoPlanta,
+      tipo_planta: tipoPlanta,
       cant_energ_gen: cantEnergGen,
-      emisiones_generadas:emisionesGen ,
-      id_domicilio: id_domicilio
+      emisiones_generadas: emisionesGen ,
+      id_domicilio: pid_domicilio
     };
     this.bdService.createPlanta(body).subscribe((data: any) => {
       console.log(data);

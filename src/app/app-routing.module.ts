@@ -1,8 +1,9 @@
+import { ConsumoMesComponent } from './Components/consumo-mes/consumo-mes.component';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
 import { CambioPersonaComponent } from './Components/cambio-persona/cambio-persona.component';
 import { VistaPersonaComponent } from './Components/vista-persona/vista-persona.component';
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
 import { AlimentaComponent } from './Components/alimenta/alimenta.component';
 import { BusquedaComponent } from './Components/busqueda/busqueda.component';
 import { HomeComponent } from './Components/home/home.component';
@@ -15,6 +16,7 @@ import { DomicilioComponent } from './Components/domicilio/domicilio.component';
 import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
 import { ColoniaComponent } from './Components/colonia/colonia.component';
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
+import { AlimentaColoniasComponent } from './Components/alimenta-colonias/alimenta-colonias.component';
 
 
 const routes: Routes = [
@@ -23,16 +25,18 @@ const routes: Routes = [
   {path: 'Viven', component: VivenComponent},
   {path: 'Alimenta', component: AlimentaComponent},
   {path: 'subAltas', component: AltasMComponent},
-  {path: 'persona', component:PersonaComponent},
-  {path: 'recibo', component:ReciboComponent},
-  {path: 'planta', component:PlantaComponent},
-  {path: 'domicilio', component:DomicilioComponent},
-  {path: 'dispositivo', component:DispositivoComponent},
-  {path: 'colonia', component:ColoniaComponent},
+  {path: 'persona', component: PersonaComponent},
+  {path: 'recibo', component: ReciboComponent},
+  {path: 'planta', component: PlantaComponent},
+  {path: 'domicilio', component: DomicilioComponent},
+  {path: 'dispositivo', component: DispositivoComponent},
+  {path: 'colonia', component: ColoniaComponent},
   {path: 'VistaPersona', component: VistaPersonaComponent},
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},
   {path: 'CambioDireccion', component: CambioDireccionComponent},
+  {path: 'Alimenta_Colonias', component: AlimentaColoniasComponent},
+  {path: 'Consumo_Mes', component: ConsumoMesComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'Home' }
 ];
 

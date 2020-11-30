@@ -28,12 +28,12 @@ export class ConexionBdService {
   createDomicilio(body: any){
     const link = `${this.url}/put_domicilio`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
-  }//no quiere dar de alta, errores en el html consola
+  }// no quiere dar de alta, errores en el html consola
 
   createPersona(body: any){
     const link = `${this.url}/put_persona`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
-  }//no quiere dar de alta a la persona
+  }// no quiere dar de alta a la persona
 
   createPlanta(body: any){
     const link = `${this.url}/put_planta`;
@@ -57,12 +57,13 @@ export class ConexionBdService {
 
   updatePersona(body: any){
     const link = `${this.url}/update_persona`;
-    return this.http.put(link, body).pipe(map((data: any) => data.array));
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
-  deletePersona(curp: any){
-    const link = `${this.url}/delete_persona/${curp}`;
-    return this.http.delete(link).pipe(map((data: any) => data.array));
+  deletePersona(ncurp: any){
+    const link = `${this.url}/delete_persona`;
+    const body = {curp: ncurp};
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
   buscarDomicilio(nombre: string){
@@ -77,21 +78,32 @@ export class ConexionBdService {
 
   updateDomicilio(body: any){
     const link = `${this.url}/update_domicilio`;
-    return this.http.put(link, body).pipe(map((data: any) => data.array));
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
   deleteDomicilio(id: string){
-    const link = `${this.url}/delete_domicilio/${id}`;
-    return this.http.delete(link).pipe(map((data: any) => data.array));
+    const link = `${this.url}/delete_domicilio`;
+    const body = {id_domicilio: id};
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
   createViven(body: any){
     const link = `${this.url}/create_viven`;
-    return this.http.post(link, body).pipe(map((data: any) => data.array));
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
   }
 
   createAlimenta(body: any){
     const link = `${this.url}/create_alimenta`;
+    return this.http.put(link, body).pipe(map((data: any) => data.array));
+  }
+
+  getNumeroAlimenta(){
+    const link = `${this.url}/get_numero_alimenta`;
+    return this.http.get(link).pipe(map((data: any) => data.array));
+  }
+
+  getConsumoMes(body: any){
+    const link = `${this.url}/get_consumo_mes`;
     return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
