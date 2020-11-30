@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ConexionBdService } from './../../Services/conexion-bd.service';
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
@@ -9,7 +10,7 @@ import { NgForm } from '@angular/forms';
 })
 export class VivenComponent implements OnInit {
 
-  constructor(private bdService: ConexionBdService) { }
+  constructor(private bdService: ConexionBdService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -20,10 +21,10 @@ export class VivenComponent implements OnInit {
       curp: qcurp,
       id_domicilio: qidDirec
     };
-    console.log(body);
     this.bdService.createViven(body).subscribe((data: any) => {
       console.log(data);
     });
+    this.router.navigate(['/subAltas']);
   }
 
 }

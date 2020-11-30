@@ -20,7 +20,7 @@ export class ReciboComponent implements OnInit {
     const body = {
       id_domicilio: pid_domicilio,
       fecha: pfecha,
-      consumo_energia: cantEnerg,
+      consumo: cantEnerg,
       cant_pagar: cantPagar
     };
     this.bdService.createRecibo(body).subscribe((data: any) => {

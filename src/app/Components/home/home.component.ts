@@ -26,13 +26,13 @@ const INFORMACION: Carta [] = [
     titulo: 'Plantas',
     descripcion: 'Ve informacion basica de las plantas de generacion de energia',
     link: 'Alimenta_Colonias',
-    imagen: 'assets/upview.jpg'
+    imagen: 'assets/alimenta.jpeg'
   },
   {
     titulo: 'Consumo e Ingreso por Colonia',
     descripcion: 'Ve informacion sobre el consumo y el ingreso por colonia en un mes determinado',
     link: 'Consumo_Mes',
-    imagen: 'assets/upview.jpg'
+    imagen: 'assets/viven.jpeg'
   }
 ];
 
