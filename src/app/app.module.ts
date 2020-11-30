@@ -22,6 +22,8 @@ import { DomicilioComponent } from './Components/domicilio/domicilio.component';
 import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
 import { ColoniaComponent } from './Components/colonia/colonia.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { AlimentaColoniasComponent } from './Components/alimenta-colonias/alimenta-colonias.component';
+import { ConsumoMesComponent } from './Components/consumo-mes/consumo-mes.component';
 
 @NgModule({
   declarations: [
@@ -43,7 +45,9 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     PlantaComponent,
     DomicilioComponent,
     DispositivoComponent,
-    ColoniaComponent
+    ColoniaComponent,
+    AlimentaColoniasComponent,
+    ConsumoMesComponent
   ],
   imports: [
     BrowserModule,

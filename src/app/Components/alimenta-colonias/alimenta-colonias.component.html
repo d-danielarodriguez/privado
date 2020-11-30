@@ -1,0 +1,27 @@
+<div class="container my-3">
+    <div>
+        <h1 class="h3 mb-0 text-secondary">Plantas de electricidad</h1>
+    </div>
+    <hr>
+    <table class="table table-striped table-bordered table-hover">
+        <thead class="thead-dark">
+           <tr>
+               <th>ID</th>
+               <th>Tipo</th>
+               <th>Recurso</th>
+               <th>Colonias Alimentadas</th>
+           </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor="let i of info">
+                <th>{{i.ID}}</th>
+                <td>{{i.Renovable}} </td>
+                <td>{{i.Recurso}}</td>
+                <td>{{i.Colonias_Alimentadas}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <button class="btn btn-outline-dark" (click)="regresar()">Regresar</button>
+    </div>
+</div>

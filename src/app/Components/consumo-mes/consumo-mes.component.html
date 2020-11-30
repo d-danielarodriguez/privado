@@ -1,0 +1,63 @@
+<div class="container my-3">
+    <div>
+        <h1 class="h3 mb-0 text-secondary">Relacion de Consumo e Ingreso</h1>
+    </div>
+    <hr>
+    <form (ngSubmit)="onSubmit()">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>Mes</th>
+                    <th>Año</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <select name="mes" [(ngModel)]="mesSelect">
+                            <option *ngFor="let i of meses" [value]="i.num">{{i.mes}}</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="number" name="año" [(ngModel)]="anioSelect">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="text-center"> <button class="btn btn-outline-primary" type="submit">Buscar</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </form>
+<hr>
+    <div *ngIf="existe">
+        <table class="table table-hover table-bordered table-striped">
+            <thead class="thead-dark">
+                <tr>
+                    <th>CP</th>
+                    <th>Nombre</th>
+                    <th>Consumo</th>
+                    <th>Ingreso</th>
+                </tr>
+            </thead>
+            <tbody *ngFor="let i of info">
+                <tr>
+                    <td>{{i.CP}}</td>
+                    <td>{{i.Nombre}}</td>
+                    <td>{{i.Consumo}}KW</td>
+                    <td>${{i.Sueldo}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div *ngIf="noExiste" class="alert alert-info" role="alert">
+        No se ha podido encontrar información para esa fecha. Seleccione otra.
+    </div>
+
+    <div>
+        <button class="btn btn-outline-dark" (click)="regresar()">Regresar</button>
+    </div>
+
+
+
+</div>

@@ -1,3 +1,4 @@
+import { ConsumoMesComponent } from './Components/consumo-mes/consumo-mes.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CambioDireccionComponent } from './Components/cambio-direccion/cambio-direccion.component';
@@ -15,6 +16,7 @@ import { DomicilioComponent } from './Components/domicilio/domicilio.component';
 import { DispositivoComponent } from './Components/dispositivo/dispositivo.component';
 import { ColoniaComponent } from './Components/colonia/colonia.component';
 import { VistaDireccionComponent } from './Components/vista-direccion/vista-direccion.component';
+import { AlimentaColoniasComponent } from './Components/alimenta-colonias/alimenta-colonias.component';
 
 
 const routes: Routes = [
@@ -33,6 +35,8 @@ const routes: Routes = [
   {path: 'CambioPersona', component: CambioPersonaComponent},
   {path: 'VistaDireccion', component: VistaDireccionComponent},
   {path: 'CambioDireccion', component: CambioDireccionComponent},
+  {path: 'Alimenta_Colonias', component: AlimentaColoniasComponent},
+  {path: 'Consumo_Mes', component: ConsumoMesComponent},
   { path: '**', pathMatch: 'full', redirectTo: 'Home' }
 ];
 

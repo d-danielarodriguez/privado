@@ -1,4 +1,4 @@
-<div class="container mb-5">
+<div class="container my-5">
     <form (ngSubmit)="onSubmit(form)" #form="ngForm">
         <table class="table table-hover table-bordered table-striped">
             <thead class="thead-dark">
@@ -19,7 +19,7 @@
                             </div>
                             <div class="form-check form-check-inline mx-4">
                                 <input class="form-check-input" ngbButton type="radio" [value]="2" name="radios" id=r2>
-                                <label class="form-check-label" for="r2" ngbButtonLabel>Direccion</label>
+                                <label class="form-check-label" for="r2" ngbButtonLabel>Domicilio</label>
                             </div>
                         </div>
                     </td>
@@ -89,7 +89,11 @@
         </table>
     </div>
 
-    <div *ngIf="errorActive">
+    <div *ngIf="errorActive" class="alert alert-info" role="alert">
         <p>Elegir un tipo de busqueda</p>
+    </div>
+
+    <div>
+        <button class="btn btn-outline-dark" (click)="regresar()">Regresar</button>
     </div>
 </div>
