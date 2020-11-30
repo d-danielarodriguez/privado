@@ -65,7 +65,7 @@
             <thead class="thead-dark">
                <tr>
                    <th>Id</th>
-                   <th>Calle</th>
+                   <th>Domicilio</th>
                    <th>Ver mas</th>
                    <th>Modificar</th>
                    <th>Eliminar</th>
@@ -74,7 +74,7 @@
             <tbody>
                 <tr *ngFor="let i of info">
                     <th>{{i.id_domicilio}}</th>
-                    <td>{{i.calle}} </td>
+                    <td>{{i.calle+" #"+i.numero}} </td>
                     <td class="text-center">
                         <button class="btn btn-dark" (click)="verDomicilio(i.id_domicilio)"><fa-icon [icon]="faEye"></fa-icon></button>
                     </td>
