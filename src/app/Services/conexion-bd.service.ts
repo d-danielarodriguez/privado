@@ -42,7 +42,7 @@ export class ConexionBdService {
 
   createRecibo(body: any){
     const link = `${this.url}/put_recibo`;
-    return this.http.put(link, body).pipe(map((data: any) => data.array));
+    return this.http.post(link, body).pipe(map((data: any) => data.array));
   }
 
   buscarPersona(nombre: string){
@@ -88,12 +88,12 @@ export class ConexionBdService {
   }
 
   createViven(body: any){
-    const link = `${this.url}/create_viven`;
+    const link = `${this.url}/put_viven`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
   }
 
   createAlimenta(body: any){
-    const link = `${this.url}/create_alimenta`;
+    const link = `${this.url}/put_alimenta`;
     return this.http.put(link, body).pipe(map((data: any) => data.array));
   }
 
